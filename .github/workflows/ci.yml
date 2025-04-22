@@ -21,8 +21,6 @@ jobs:
             - name: Check Coverage
               run: go test -cover ./...
 
-            - name: Style
-              run: test -z $(go fmt ./...)
             
     style:
         name: Style
