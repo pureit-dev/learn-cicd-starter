@@ -30,6 +30,10 @@ func main() {
 		log.Printf("warning: assuming default configuration. .env unreadable: %v", err)
 	}
 
+	func unUsed(){
+		// This function is unused, but it is used to ensure that the database package is imported
+		_ = database.New(nil)
+	}
 	port := os.Getenv("PORT")
 	if port == "" {
 		log.Fatal("PORT environment variable is not set")
